@@ -1,87 +1,77 @@
 <!--<html>-->
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="René Louis">
+    <meta name="description" content="Recount a trip in the Cairngorms National Park in Scotland in November 2020, with pictures.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trip to the Cairngorns</title>
+    <title>Trip to the Cairngorms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
 
-    <script src="js/script.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <a hidden class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
     <header> <!-- style="background: url(images/DSC00227_1024.jpg) no-repeat center orange; height: 400px;"> -->
-        <div class="site-header centered">
             <div class="site-branding">
                 <h1 class="site-title"><a href="/">Trip to the Cairngorms</a></h1>
             </div>
-        </div>
     </header>
 
-    <div id="showcase" class="promo-area">
-
-        <div class="promo-content">
-            <div class="promo-text">
-                <h2 class="promo-title">A weekend trip to the Cairngorms</h2>
-                <p class="promo-lede">That pretty much sums it up. A little trip to the beatiful Cairngorms National park over 7th and 8th November 2020.</p>
-            </div> <!-- .promo-text -->
-        </div> <!-- .promo-content -->
-    </div> <!-- #showcase .promo-area -->
+    <section id="showcase" class="promo-area">
+              <h2 class="promo-title">A weekend trip to the Cairngorms</h2>
+              <p class="promo-lede">That pretty much sums it up. A little trip to the beatiful Cairngorms National park over <time datetime="2020-11-07">the 7<sup>th</sup> and 8<sup>th</sup> November 2020</time>.</p>
+    </section>
 
     <main class="main-area">
 
-        <div class="top-pitch centered">
-            <h2 class="main-title">Welcome to the story of the trip</h2>
+        <section class="top-pitch centered">
+            <h3 class="main-title">Welcome to the story of the trip</h3>
             <p class="teaser two-column">
                 Lorem ipsum dolor sit  amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
             </p>
-        </div>
-        <h2 class="main-title">A few pictures</h2>
+        </section>
+        <h3 class="main-title">A few pictures</h3>
         <section class="images">
           <ul>
-            <li>
-                <img  srcset="/images/DSC00210_340.jpg 340w,
-                              /images/DSC00210_640.jpg  640w,
-                              /images/DSC00210_1024.jpg 1024w"
-                      sizes="(max-width: 640px) 340px,
-                             (max-width: 1024px) 640px,
-                             1024px"
-                      src="/images/DSC00210_640.jpg"
-                      sizes="(max-width: 640px)"
-                      alt="Picture 1"></li>
 
-                <img  srcset="/images/DSC00210_340.jpg 340w,
-                              /images/DSC00210_640.jpg 640w,
-                              /images/DSC00210_1024.jpg 1024w"
-                      sizes="(max-width: 640px) 340px,
-                             (max-width: 1024px) 640px,
-                             1024px"
-                      src="/images/DSC00260_1024.jpg"
-                      alt="Picture 1">
+                <figure>
+                    <img  srcset="/images/DSC00210_320.jpg 320w,
+                                  /images/DSC00210_640.jpg  640w,
+                                  /images/DSC00210_1024.jpg 1024w"
+                          sizes="(max-width: 640px) 340px,
+                                 (max-width: 1024px) 640px,
+                                 1024px"
+                          src="/images/DSC00210_640.jpg"
+                          sizes="(max-width: 640px)"
+                          alt="Picture of the ruins of an acqueduct near Glenshee ski centre in the Cairngorms National Park, in Scotland."
+                          width="" height="">
+                    <figcaption>Ruins of an acqueduct near <i>Glenshee</i> ski centre in the Cairngorms National Park, in Scotland.</figcaption>
+                </figure>
+
+                <figure>
+                    <img  srcset="/images/DSC00260_320.jpg 320w,
+                                  /images/DSC00260_640.jpg 640w,
+                                  /images/DSC00260_1024.jpg 1024w"
+                          sizes="(max-width: 640px) 340px,
+                                 (max-width: 1024px) 640px,
+                                 1024px"
+                          src="/images/DSC00260_1024.jpg"
+                          alt="Picture of a river going through the town of Braemar in the Cairngorms National Park, in Scotland."
+                          width="" height="">
+                    <figcaption><i>The Clunie Water</i> stream going through the town of <i>Braemar</i> in the Cairngorms National Park, in Scotland. The picture is taken from the <i>The Old Military Road</i> bridge over the river.</figcaption>
+                </figure>
           </ul>
         </section><!-- .stories centered -->
 
     </main><!-- .main-area -->
 
     <footer class="footer">
-
-        <section class="footer-widgets centered">
-            <div class="widget footer-address">
-                <address>
-                    <h4 class="widget-title">René Louis</h4>
-                    <p>
-                        North Fettes Apartments<br>
-                        Crewe Road North<br>
-                        Edinburgh, <br>
-                        Scotland
-                    </p>
-                </address>
-            </div><!-- .widget -->
-        </section><!-- .footer-widgets -->
         <nav class="social-nav" role="navigation">
             <ul>
                 <li><a class="icon-linkedin" data-grunticon-embed href="https://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
@@ -92,9 +82,9 @@
             </ul>
         </nav><!-- .social-nav -->
 
-        <div class="dimensions">
+        <section class="dimensions">
             <!-- Insert text node with var dimensions via JS. -->
-        </div>
+        </section>
 
     </footer><!-- .footer -->
 </body>

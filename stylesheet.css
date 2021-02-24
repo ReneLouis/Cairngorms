@@ -7,9 +7,9 @@
 :root {
   --maincolor: #CBEDCA; /* Tea Green */
   --emphasiscolor: #ECA72C; /* Marigold */
+  --emphasisBackground: rgba(235, 166, 45, 0.65); /* Marigold, opacity 0.65 */
   --oppositecolor: #25095B; /* Dark Purple */
 }
-
 
 /* ============================================================================ */
 /* ================================ GENERAL =================================== */
@@ -20,10 +20,14 @@ body {
   margin: 0 auto;
   background-color: var(--maincolor);
 }
-p {
+p, li {
   font-family: 'Raleway', sans-serif;
 }
 h2, h3 {font-family: 'Stick', sans-serif;}
+nav, main section:first-child, main section > h3 {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 /* ============================================================================ */
 /* ================================ HEADER ==================================== */
@@ -60,36 +64,55 @@ main img {width: 100%}
 
 /* ============================================================================ */
 /* ================================== NAV ===================================== */
-
-nav section.nav-grid {
+nav section li {
+  list-style-type: none;
+}
+nav section.menu ul{
+  text-align: center;
+  padding: 0;
+}
+nav section.menu ul li {
+  display: inline-block;
+}
+nav section.menu ul li button {
+  width: 5rem;
+  padding: 0.5rem 0;
+  border: 2px ridge var(--oppositecolor);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: var(--emphasisBackground);
+  /* opacity: 0.5; */
+  color: var(--oppositecolor);
+}
+nav section.nav-grid ul{
+  margin: 0;
+  padding:0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(8, max-content); */
+  line-height: 0.8;
   border: dashed red 1px;
 }
-/* nav section.nav-grid div {
-  border: 1px solid blue;
-} */
 nav section.nav-grid img {
   width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
+  max-width: 100px;
+  height: 66px;
+  object-fit: center;
 }
 
 /* [MEDIA QUERIES]========================================= */
 @media screen and (min-width: 31em) {
-  nav section.nav-grid {
+  nav section.nav-grid ul {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-@media screen and (min-width: 50em) {
-  nav section.nav-grid {
+@media screen and (min-width: 44em) {
+  nav section.nav-grid ul {
     grid-template-columns: repeat(8, 1fr);
   }
 }
-
-
-
+@media screen and (max-width: 20em) {
+  nav section.nav-grid img {height: 3rem; }
+}
 /* ============================================================================ */
 /* ================================ FOOTER ==================================== */
 

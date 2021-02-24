@@ -63,10 +63,10 @@ function lauch() {
 // document.querySelector('header').setAttribute("style", header(WIDTH));
 // displayScreenSize();
 // updateImageSize();
-lauch();
+// lauch();
 
 // Call-back funstion size replaced by arrow function:
 // window.addEventListener('resize', ()=>{document.querySelector('header').setAttribute("style", header(WIDTH))}, false);
 // window.addEventListener('resize', displayScreenSize, false);
 // window.addEventListener('resize', updateImageSize, false);
-window.addEventListener('resize', lauch, false);
+// window.addEventListener('resize', lauch, false);

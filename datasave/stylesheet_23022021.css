@@ -1,43 +1,27 @@
-/* |-| ============================== FONTS =================================== */
-/*      font-family: 'Indie Flower', cursive;
-        font-family: 'Raleway', sans-serif;
-        font-family: 'Stick', sans-serif; */
-
-/* |-| ====================== COLOR PALETTE =================================== */
-:root {
-  --maincolor: #CBEDCA; /* Tea Green */
-  --emphasiscolor: #ECA72C; /* Marigold */
-  --oppositecolor: #25095B; /* Dark Purple */
-}
-
 
 /* ============================================================================ */
 /* ================================ GENERAL =================================== */
 html {box-sizing: border-box; margin: 0; padding: 0; font-size: 16px; line-height: 1.5;}
-*, *:before, *after {box-sizing: inherit; padding: 0; margin: 0;}
+*, *:before, *after {box-sizing: inherit;}
 body {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--maincolor);
+  background-color: white;
 }
-p {
-  font-family: 'Raleway', sans-serif;
-}
-h2, h3 {font-family: 'Stick', sans-serif;}
+
 
 /* ============================================================================ */
 /* ================================ HEADER ==================================== */
 header {
-  background-image: url(images/DSC00227_1024.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: url(images/DSC00227_1024.jpg) no-repeat center orange;
+  /* position: fixed; */
+  top: 0;
   width: 100%;
 }
 h1 {
   font-family: 'Indie Flower', cursive;
   text-align: center;
-  color: var(--maincolor);
+  color: #208D0F;
   font-size: 1.8rem;
   padding: 1rem 0;
   margin: 0;
@@ -45,12 +29,7 @@ h1 {
 
 /* ============================================================================ */
 /* ================================= MAIN ===================================== */
-main {
-  color: var(--oppositecolor);
-}
-main section {
-  padding: 0 2%;
-}
+
 figure {margin: 0;}
 figcaption {
   font-size: 0.9em;
@@ -64,17 +43,9 @@ main img {width: 100%}
 nav section.nav-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(8, max-content); */
-  border: dashed red 1px;
+  grid-template-rows: 1fr;
 }
-/* nav section.nav-grid div {
-  border: 1px solid blue;
-} */
-nav section.nav-grid img {
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
-}
+nav img {width: 100%;}
 
 /* [MEDIA QUERIES]========================================= */
 @media screen and (min-width: 31em) {

@@ -13,6 +13,8 @@ To do:
 Issues / To fix:
      - responsive images do not seem to work on Safari.
      - Title of page shows cairgorns
+     - Grid: protrait image messing up the size of grid items. This does not seem fixable (!).
+        Solution may require using JS to set size of container div, to set width & heigth ratio depending on viewport.
 
 
 Website purpose:

@@ -10,13 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway:wght@300&family=Stick&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/pictureList.js" async></script>
     <script src="js/script.js" defer></script>
     <script src="js/imageScript.js" defer></script>
 </head>
 
 <body>
     <a hidden class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
     <header>
         <h1>Trip to the Cairngorms</h1>
     </header>
@@ -28,31 +33,16 @@
       <section>   <!-- main picture -->
         <h3>A few pictures</h3>
           <figure>
-              <img  srcset="/images/DSC00210_320.jpg 320w,
-                            /images/DSC00210_640.jpg  640w,
-                            /images/DSC00210_1024.jpg 1024w"
-                    sizes="(max-width: 640px) 340px,
-                           (max-width: 1024px) 640px,
-                           1024px"
-                    src="/images/DSC00210_640.jpg"
-                    sizes="(max-width: 640px)"
+              <img  srcset="images/400/DSC00210.jpg 400w,
+                            images/600/DSC00210.jpg 600w,
+                            images/900/DSC00210.jpg 900w,
+                            images/1200/DSC00210.jpg 1200w,
+                            images/1800/DSC00210.jpg 1800w"
+                    src="/images/DSC00210.jpg"
                     alt="Picture of the ruins of an acqueduct near Glenshee ski centre in the Cairngorms National Park, in Scotland."
                     width="" height="">
               <figcaption>Ruins of an acqueduct near <i>Glenshee</i> ski centre in the Cairngorms National Park, in Scotland.</figcaption>
           </figure>
-
-          <!-- <figure>
-              <img  srcset="/images/DSC00260_320.jpg 320w,
-                            /images/DSC00260_640.jpg 640w,
-                            /images/DSC00260_1024.jpg 1024w"
-                    sizes="(max-width: 640px) 340px,
-                           (max-width: 1024px) 640px,
-                           1024px"
-                    src="/images/DSC00260_1024.jpg"
-                    alt="Picture of a river going through the town of Braemar in the Cairngorms National Park, in Scotland."
-                    width="" height="">
-              <figcaption><i>The Clunie Water</i> stream going through the town of <i>Braemar</i> in the Cairngorms National Park, in Scotland. The picture is taken from the <i>The Old Military Road</i> bridge over the river.</figcaption>
-          </figure> -->
       </section>
     </main><!-- .main-area -->
     <nav>

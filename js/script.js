@@ -1,5 +1,5 @@
-const HEADERTITLE = document.querySelector(".site-title > a").innerText;
-const IMAGES = document.querySelectorAll('img');
+// const HEADERTITLE = document.querySelector(".site-title > a").innerText;
+// const IMAGES = document.querySelectorAll('img');
 const SIZES = {small: {width: 320, height: 213},
                 medium: {width: 640, height: 426},
                 large: {width: 1024, height: 682}
@@ -7,24 +7,24 @@ const SIZES = {small: {width: 320, height: 213},
 
 // load header background image depending of widow width
 var WIDTH;
-function header() {
-    WIDTH = window.innerWidth;
-    var pic = [];         // w & h of image
-    if (WIDTH >= 1024) {
-      pic = [1024, 197];
-      document.querySelector('.site-title').innerHTML = HEADERTITLE;
-      return "background: url(images/DSC00227_" + pic[0] + ".jpg) no-repeat center orange; height: " + pic[1] + "px";
-    } else if (WIDTH >= 640) {
-      pic = [640, 123];
-      document.querySelector('.site-title').innerHTML = HEADERTITLE;
-      return "background: url(images/DSC00227_" + pic[0] + ".jpg) no-repeat center orange; height: " + pic[1] + "px";
-    } else {
-      pic = [0, 0];
-      document.querySelector('.site-title').innerHTML = "";
-      return "height: " + pic[1] + "px";
-      //document.querySelector('header').
-    }
-}
+// function header() {
+//     WIDTH = window.innerWidth;
+//     var pic = [];         // w & h of image
+//     if (WIDTH >= 1024) {
+//       pic = [1024, 197];
+//       document.querySelector('.site-title').innerHTML = HEADERTITLE;
+//       return "background: url(images/DSC00227_" + pic[0] + ".jpg) no-repeat center orange; height: " + pic[1] + "px";
+//     } else if (WIDTH >= 640) {
+//       pic = [640, 123];
+//       document.querySelector('.site-title').innerHTML = HEADERTITLE;
+//       return "background: url(images/DSC00227_" + pic[0] + ".jpg) no-repeat center orange; height: " + pic[1] + "px";
+//     } else {
+//       pic = [0, 0];
+//       document.querySelector('.site-title').innerHTML = "";
+//       return "height: " + pic[1] + "px";
+//       //document.querySelector('header').
+//     }
+// }
 
 // Add dimensions of window on page
 function displayScreenSize() {
@@ -56,8 +56,8 @@ function updateImageSize() {
 
 function lauch() {
   displayScreenSize();
-  updateImageSize();
-  document.querySelector('header').setAttribute("style", header(WIDTH));
+  // updateImageSize();
+  // document.querySelector('header').setAttribute("style", header(WIDTH));
 }
 
 // document.querySelector('header').setAttribute("style", header(WIDTH));

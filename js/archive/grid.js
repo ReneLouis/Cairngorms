@@ -5,10 +5,13 @@
 
 const GRIDROOT = document.querySelector("nav section.nav-grid ul");
 
-for (let n = 0 ; n < IMGLIBRARY.length ; n++) {
+for (let n = 0 ; n < IMAGELIST.length ; n++) {
+  let liContent = "alt src='images/280/" + IMAGELIST[n].name;
   let newImg = document.createElement("img");
-    newImg.alt = IMGLIBRARY[n].alt;
-    newImg.src = IMGLIBRARY[n].srcgrid();
+    newImg.alt = "Waffle No " + n;
+    newImg.src = "images/280/" + IMAGELIST[n].name
+  // let newA = document.createElement("a");
+  //   newA.href = "";
   let newLi = document.createElement("li");
     newLi.appendChild(newImg);
   GRIDROOT.appendChild(newLi);

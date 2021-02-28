@@ -1,0 +1,25 @@
+// Contains list of images uploaded onto site.
+//This must match with images loaded in /images subfolders.
+
+const IMAGELIST = [{name: "DSC00210.jpg", alt: "Aqueduct ruins in the Cairngorms.", description: "Ruins of an acqueduct near <i>Glenshee</i> ski centre in the Cairngorms National Park, in Scotland."},
+{name: "DSC00249.jpg", alt: "Valley in Caringorms", description: "View over the valley."},
+{name: "DSC00261.jpg", alt: "View over river in Breamar.", description: "View over river in Breamar."},
+{name: "DSC00315.jpg", alt: "View over the plain.", description: "View over the plain."},
+{name: "DSC00318.jpg", alt: "View over the plain.", description: "View over the plain."},
+{name: "DSC00336.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view in Boat of Garden."},
+{name: "DSC00354.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view, Boat of Garden."},
+{name: "DSC00366.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view, Boat of Garden."},
+{name: "DSC00369.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
+{name: "DSC00375.jpg", alt: "Cairngorms mountain and Loch Morlich.", description: "View over the Cairngorm mountain and Loch Morlich."},
+{name: "DSC00387.jpg", alt: "Honda CBF1000A on the Cairgorms ski station.", description: "Honda CBF1000A on the Cairgorms ski station."},
+{name: "DSC00393.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
+{name: "DSC00408.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
+{name: "DSC00423.jpg", alt: "Water stream on the mountainside.", description: "Water stream on the mountainside."},
+{name: "DSC00435.jpg", alt: "Walkaway on the mountainside", description: "Walkaway on the mountainside"},
+{name: "DSC00461.jpg", alt: "Glenmore Forest park.", description: "View over the Glenmore Forest park."},
+{name: "DSC00465.jpg", alt: "Glenmore Forest park.", description: "View over the Glenmore Forest park."},
+{name: "DSC00474.jpg", alt: "Loch Morlich, from the Glenmore Forest park.", description: "View over Loch Morlich from Glenmore Forest park."},
+{name: "DSC00501.jpg", alt: "Walkaway in the Glenmore Forest park.", description: "Strolling in the Glenmore Forest park."},
+{name: "DSC00504.jpg", alt: "Walkaway in the Glenmore Forest park.", description: "Strolling in the Glenmore Forest park."},
+{name: "DSC00525.jpg", alt: "The bike in the Glenmore Forest Park.", description: "The bike in the Glenmore Forest Park."},
+{name: "DSC00531.jpg", alt: "The bike in the Glenmore Forest Park.", description: "The bike in the Glenmore Forest Park."}]

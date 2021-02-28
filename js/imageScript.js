@@ -3,6 +3,7 @@
 // =============================================================================
 // =============================== MAIN IMAGE CHANGE ===========================
 var mainImg = document.querySelector('main > section > figure > img');
+var caption = document.querySelector('main > section > figure > figcaption');
 let n = 0;
 let timerId = null;
 
@@ -10,14 +11,17 @@ let timerId = null;
 // Change the name of picture to callback in changeImg.
 function updateImg() {
   (n == IMAGELIST.length-1) ? n = 0 : n++;
-    changeImg(IMAGELIST[n].name);
+    changeImg(n);
 }
 
 // This function update srcset and src for mainImg. Keept seperate to re-use when adding buttons.
-function changeImg(i) {
+function changeImg(n) {
   // console.log("n = " + n + " ; " + IMAGELIST[n].name);
+  let i = IMAGELIST[n].name
   mainImg.srcset = "images/400/" + i + " 400w, images/600/" + i + " 600w, images/900/" + i + " 900w, images/1200/" + i + " 1200w,images/1800/" + i + " 1800w";
   mainImg.src = "images/600/" + i;
+  mainImg.alt = IMAGELIST[n].alt;
+  caption.innerHTML = IMAGELIST[n].description;
 }
 
 function imageSwitch() {
@@ -50,7 +54,7 @@ function prevnext(i) {
     return;
   }
   n = n + i;
-  changeImg(IMAGELIST[n].name);
+  changeImg(n);
   (playing == true) ? imageSwitch() : "";
 }
 
@@ -68,9 +72,8 @@ CLICKEDIMGS.forEach(function(CLICKEDIMG) {
 })
 
 function checkIndex(e) {
-  console.log(Array.from(CLICKEDIMGS).indexOf(e.target));
-  console.log(IMAGELIST[Array.from(CLICKEDIMGS).indexOf(e.target)].name);
-  changeImg(IMAGELIST[Array.from(CLICKEDIMGS).indexOf(e.target)].name);       // change img displayed.
+  n = Array.from(CLICKEDIMGS).indexOf(e.target);  // Assign index of clicked image to n.
+  changeImg(n);           // change img displayed.
   (playing === true) ?  prevnext(0) : "";              // If diaporama is playing, stop it.s
 }
 // =============================================================================

@@ -16,17 +16,15 @@ function updateImg() {
 
 // This function update srcset and src for mainImg. Keept seperate to re-use when adding buttons.
 function changeImg(n) {
-  // console.log("n = " + n + " ; " + IMAGELIST[n].name);
-  let i = IMAGELIST[n].name
-  mainImg.srcset = "images/400/" + i + " 400w, images/600/" + i + " 600w, images/900/" + i + " 900w, images/1200/" + i + " 1200w,images/1800/" + i + " 1800w";
-  mainImg.src = "images/600/" + i;
+  mainImg.srcset = "images/400/" + IMAGELIST[n].name + " 400w, images/600/" + IMAGELIST[n].name + " 600w, images/900/" + IMAGELIST[n].name + " 900w, images/1200/" + IMAGELIST[n].name + " 1200w,images/1800/" + IMAGELIST[n].name + " 1800w";
+  mainImg.src = "images/600/" + IMAGELIST[n].name;
   mainImg.alt = IMAGELIST[n].alt;
   caption.innerHTML = IMAGELIST[n].description;
 }
 
 function imageSwitch() {
   clearInterval(timerId);
-  timerId = setInterval(updateImg, 3000);
+  timerId = setInterval(updateImg, 6000);
 }
 
 imageSwitch();

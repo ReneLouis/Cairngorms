@@ -74,7 +74,7 @@ main section {
 figure {margin: 0;}
 figcaption {
   max-width: 800px;
-  padding-left: 1.5rem;
+  padding: 0 1.5rem 0 1rem;
   margin: 0 auto;
   font-size: 0.9em;
   color: var(--bordercolor);
@@ -95,27 +95,30 @@ main img {
 /* ================================== NAV ===================================== */
 nav section li {
   list-style-type: none;
+  text-align: center;
 }
 nav section.menu ul {
   text-align: center;
-  padding: 0;
+  padding: 0 0 0.5rem 0;
 }
 nav section.menu ul li {
   display: inline-block;
+  text-align: center;
 }
 nav section.menu ul li button {
   width: 5rem;
   padding: 0.5rem 0;
   border: 2px ridge var(--bordercolor);
-  /* border-radius: 0.5rem; */
   border-radius: 25% 0 ;
   cursor: pointer;
   background-color: var(--emphasisBackground);
   color: var(--bordercolor);
   font-size: 1.1rem;
+  transition: all 0.2s;
 }
 nav section.menu ul li button:hover {
   transform: scale(1.2);
+  box-shadow: 3px 8px 5px 1px hsl(48deg 7% 12%)
 }
 nav section.nav-grid ul {
   margin: 0;
@@ -130,12 +133,14 @@ nav section.nav-grid img {
   max-width: 100px;
   height: 66px;
   cursor: pointer;
-  /* border: 1px solid; */
+  transition-duration: .1s;
 }
-nav section.nav-grid img:hover {
-  transform: scale(1.4);
-  border: 3px solid var(--bordercolor);
+nav section.nav-grid img:hover, nav section.nav-grid img:hover {
+  transform: scale(1.4) rotate(3deg);
+  /* border: 3px solid var(--bordercolor); */
   border-radius: 40% 0 40% 0;
+  box-shadow: 3px 8px 5px 1px hsl(48deg 7% 12%);
+
 }
 
 /* [MEDIA QUERIES]========================================= */

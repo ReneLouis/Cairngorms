@@ -1,25 +1,47 @@
 // Contains list of images uploaded onto site.
 //This must match with images loaded in /images subfolders.
 
-const IMAGELIST = [{name: "DSC00210.jpg", alt: "Aqueduct ruins in the Cairngorms.", description: "Ruins of an acqueduct near <i>Glenshee</i> ski centre in the Cairngorms National Park, in Scotland."},
-{name: "DSC00249.jpg", alt: "Valley in Caringorms", description: "View over the valley."},
-{name: "DSC00261.jpg", alt: "View over river in Breamar.", description: "View over river in Breamar."},
-{name: "DSC00315.jpg", alt: "View over the plain.", description: "View over the plain."},
-{name: "DSC00318.jpg", alt: "View over the plain.", description: "View over the plain."},
-{name: "DSC00336.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view in Boat of Garden."},
-{name: "DSC00354.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view, Boat of Garden."},
-{name: "DSC00366.jpg", alt: "Riverside view, Boat of Garden.", description: "Riverside view, Boat of Garden."},
-{name: "DSC00369.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
-{name: "DSC00375.jpg", alt: "Cairngorms mountain and Loch Morlich.", description: "View over the Cairngorm mountain and Loch Morlich."},
-{name: "DSC00387.jpg", alt: "Honda CBF1000A on the Cairgorms ski station.", description: "Honda CBF1000A on the Cairgorms ski station."},
-{name: "DSC00393.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
-{name: "DSC00408.jpg", alt: "Cairngorms mountain.", description: "View over the Cairngorm mountain."},
-{name: "DSC00423.jpg", alt: "Water stream on the mountainside.", description: "Water stream on the mountainside."},
-{name: "DSC00435.jpg", alt: "Walkaway on the mountainside", description: "Walkaway on the mountainside"},
-{name: "DSC00461.jpg", alt: "Glenmore Forest park.", description: "View over the Glenmore Forest park."},
-{name: "DSC00465.jpg", alt: "Glenmore Forest park.", description: "View over the Glenmore Forest park."},
-{name: "DSC00474.jpg", alt: "Loch Morlich, from the Glenmore Forest park.", description: "View over Loch Morlich from Glenmore Forest park."},
-{name: "DSC00501.jpg", alt: "Walkaway in the Glenmore Forest park.", description: "Strolling in the Glenmore Forest park."},
-{name: "DSC00504.jpg", alt: "Walkaway in the Glenmore Forest park.", description: "Strolling in the Glenmore Forest park."},
-{name: "DSC00525.jpg", alt: "The bike in the Glenmore Forest Park.", description: "The bike in the Glenmore Forest Park."},
-{name: "DSC00531.jpg", alt: "The bike in the Glenmore Forest Park.", description: "The bike in the Glenmore Forest Park."}]
+const PICLIST = [["DSC00210.jpg", "Aqueduct ruins in the Cairngorms.", "Ruins of an aqueduct in the Cairngorms National park."],
+["DSC00249.jpg", "Valley in Caringorms", "View over the valley."],
+["DSC00261.jpg", "View over river in Breamar.", "View over river in Breamar."],
+["DSC00315.jpg", "View over the plain.", "View over the plain."],
+["DSC00318.jpg", "View over the plain.", "View over the plain."],
+["DSC00336.jpg", "Riverside view, Boat of Garden.", "Riverside view in oat of Garden."],
+["DSC00354.jpg", "Riverside view, Boat of Garden.", "Riverside view, Boat of Garden."],
+["DSC00366.jpg", "Riverside view, Boat of Garden.", "Riverside view, Boat of Garden."],
+["DSC00369.jpg", "Cairngorms mountain.", "View over the Cairngorm mountain."],
+["DSC00375.jpg", "Cairngorms mountain and Loch Morlich.", "View over the Cairngorm mountain and Loch Morlich."],
+["DSC00387.jpg", "Honda CBF1000A on the Cairgorms ski station.", "Honda CBF1000A on the Cairgorms ski station."],
+["DSC00393.jpg", "Cairngorms mountain.", "View over the Cairngorm mountain."],
+["DSC00408.jpg", "Cairngorms mountain.", "View over the Cairngorm mountain."],
+["DSC00423.jpg", "Water stream on the mountainside.", "Water stream on the mountainside."],
+["DSC00435.jpg", "Walkaway on the mountainside", "Walkaway on the mountainside"],
+["DSC00461.jpg", "Glenmore Forest park.", "View over the Glenmore Forest park."],
+["DSC00465.jpg", "Glenmore Forest park.", "View over the Glenmore Forest park."],
+["DSC00474.jpg", "Loch Morlich, from the Glenmore Forest park.", "View over Loch Morlich from Glenmore Forest park."],
+["DSC00501.jpg", "Walkaway in the Glenmore Forest park.", "Strolling in the Glenmore Forest park."],
+["DSC00504.jpg", "Walkaway in the Glenmore Forest park.", "Strolling in the Glenmore Forest park."],
+["DSC00525.jpg", "The bike in the Glenmore Forest Park.", "The bike in the Glenmore Forest Park."],
+["DSC00531.jpg", "The bike in the Glenmore Forest Park.", "The bike in the Glenmore Forest Park."]]
+
+// This is a class:
+function Image(name, alt, description) {
+  this.name = name;
+  this.alt = alt;
+  this.description = description;
+  this.srcset = function() {
+    return "images/400/" + this.name + " 400w, images/600/" + this.name + " 600w, images/900/" + this.name + " 900w, images/1200/" + this.name + " 1200w,images/1800/" + this.name + " 1800w";
+  };
+  this.src = function() {
+    return "images/600/" + this.name;
+  };
+  this.srcgrid = function() {
+    return "images/280/" + this.name;
+  }
+}
+
+// Create new array IMGLIBRARY and fill with objects for each picture:
+const IMGLIBRARY = [];
+for (let i = 0 ; i < PICLIST.length ; i++) {
+  IMGLIBRARY[i] = new Image(PICLIST[i][0], PICLIST[i][1], PICLIST[i][2]);
+}

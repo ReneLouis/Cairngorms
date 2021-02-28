@@ -1,4 +1,4 @@
-// const IMGLIBRARY is locatedin 'js/PictureList_TEST'.
+// const IMAGELIST is locatedin 'js/PictureList'.
 
 // =============================================================================
 // =============================== MAIN IMAGE CHANGE ===========================
@@ -10,19 +10,17 @@ let timerId = null;
 
 // Change the name of picture to callback in changeImg.
 function updateImg() {
-  (n == IMGLIBRARY.length-1) ? n = 0 : n++;
-    console.log(n)
+  (n == IMAGELIST.length-1) ? n = 0 : n++;
     changeImg(n);
 }
 
 // This function update srcset and src for mainImg. Keept seperate to re-use when adding buttons.
-
-  function changeImg(n) {
-      mainImg.srcset = IMGLIBRARY[n].srcset();
-      mainImg.src = IMGLIBRARY[n].src();
-      mainImg.alt = IMGLIBRARY[n].alt;
-      caption.innerHTML = IMGLIBRARY[n].description;
-  }
+function changeImg(n) {
+  mainImg.srcset = "images/400/" + IMAGELIST[n].name + " 400w, images/600/" + IMAGELIST[n].name + " 600w, images/900/" + IMAGELIST[n].name + " 900w, images/1200/" + IMAGELIST[n].name + " 1200w,images/1800/" + IMAGELIST[n].name + " 1800w";
+  mainImg.src = "images/600/" + IMAGELIST[n].name;
+  mainImg.alt = IMAGELIST[n].alt;
+  caption.innerHTML = IMAGELIST[n].description;
+}
 
 function imageSwitch() {
   clearInterval(timerId);
